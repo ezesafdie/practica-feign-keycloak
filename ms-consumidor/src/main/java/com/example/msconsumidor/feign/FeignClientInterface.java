@@ -5,7 +5,7 @@ import com.example.msconsumidor.config.OAuthFeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name = "ms-consumido", configuration = FeignInterceptor.class)
+@FeignClient(name = "ms-consumido", configuration = OAuthFeignConfig.class)
 public interface FeignClientInterface {
 
     @GetMapping("/consumido")

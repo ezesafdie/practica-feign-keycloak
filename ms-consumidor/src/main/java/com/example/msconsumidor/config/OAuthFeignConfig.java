@@ -27,6 +27,7 @@ public class OAuthFeignConfig {
         OAuthClientCredentialsFeignManager clientCredentialsFeignManager = new OAuthClientCredentialsFeignManager(authorizedClientManager(), clientRegistration);
 
         String access_token = clientCredentialsFeignManager.getAccessToken();
+        System.out.println(access_token);
 
         return requestTemplate -> {
             requestTemplate.header("Authorization", "Bearer " + access_token);
