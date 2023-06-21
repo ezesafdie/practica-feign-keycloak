@@ -13,6 +13,7 @@ public class FeignInterceptor implements RequestInterceptor {
     public void apply(RequestTemplate requestTemplate) {
 
         String token = getAccessToken();
+        System.out.println(token);
         if (token != null) {
             requestTemplate.header("Authorization", "Bearer " + token);
         }

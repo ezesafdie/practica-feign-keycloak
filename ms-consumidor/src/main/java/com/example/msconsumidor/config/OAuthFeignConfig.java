@@ -34,7 +34,7 @@ public class OAuthFeignConfig {
         };
     }
 
-    //  @Bean
+//      @Bean
     OAuth2AuthorizedClientManager authorizedClientManager() {
         OAuth2AuthorizedClientProvider authorizedClientProvider = OAuth2AuthorizedClientProviderBuilder.builder().clientCredentials().build();
 
